@@ -37,7 +37,7 @@ jobs:
     strategy:
       matrix:
         # Will be checking following versions
-        go: ["1.22", "1.23", "1.24"]
+        go: ["1.24", "1.25"]
     steps:
 
     # Checks out repository
@@ -73,8 +73,8 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        # Will be checking following versions
-        go: ["1.22", "1.23", "1.24"]
+        # Test only the latest version because macOS runners are scarce.
+        go: ["1.25"]
     steps:
     # Checks out repository
     - uses: actions/checkout@v4
@@ -113,7 +113,7 @@ jobs:
     strategy:
       matrix:
         # Will be checking following versions
-        go: ["1.22", "1.23", "1.24"]
+        go: ["1.24", "1.25"]
     steps:
     # Checks out repository
     - uses: actions/checkout@v4
